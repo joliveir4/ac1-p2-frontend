@@ -1,0 +1,14 @@
+<section class="produto-detalhe">
+<ng-container *ngIf="product; else notFound">
+<h1>{{ product.nome }}</h1>
+<p><strong>Preço:</strong> R$ {{ product.preco }}</p>
+<p><strong>Descrição:</strong> {{ product.descricao }}</p>
+<p><strong>Status:</strong> {{ product.emEstoque ? 'Em estoque' : 'Fora de estoque' }}</p>
+<button (click)="voltar()">Voltar para Produtos</button>
+</ng-container>
+
+
+<ng-template #notFound>
+<p>Produto não encontrado.</p>
+</ng-template>
+</section>

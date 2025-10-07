@@ -1,0 +1,9 @@
+.banner {
+padding: 1rem;
+border-radius: 8px;
+background: linear-gradient(#fff7e6, #fff1cc);
+margin-top: 1rem;
+}
+.toggle {
+margin-bottom: .5rem;
+}

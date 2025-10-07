@@ -1,0 +1,10 @@
+<section class="home">
+<h1>Bem-vindo à Loja</h1>
+<button (click)="toggleBanner()" class="toggle">{{ showBanner ? 'Ocultar Banner' : 'Mostrar Banner' }}</button>
+
+
+<div *ngIf="showBanner" class="banner">
+<h2>Promoção: 20% OFF em produtos selecionados!</h2>
+<p>Frete grátis para compras acima de R$ 199,00</p>
+</div>
+</section>

@@ -1,0 +1,24 @@
+<section class="produtos">
+<h1>Produtos</h1>
+
+
+<div *ngIf="products && products.length === 0">Nenhum produto disponível no momento</div>
+
+
+<ul>
+<li *ngFor="let p of products" class="produto-item">
+<h3>{{ p.nome }} — R$ {{ p.preco }}</h3>
+<p>{{ p.descricao }}</p>
+
+
+<button
+(click)="comprar(p.id)"
+[disabled]="!p.emEstoque"
+[ngStyle]="{ 'background-color': p.emEstoque ? '#007bff' : 'gray', 'color': 'white' }"
+class="btn-comprar"
+>
+Comprar
+</button>
+</li>
+</ul>
+</section>
